@@ -1,0 +1,28 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+"""animal"""
+type Animal {
+  id: ID!
+  lived: String
+  name_animal: String
+}
+
+input AnimalArgs {
+  skip: Int! = 0
+  take: Int! = 10
+}
+
+"""create Animal Input"""
+input AnimalInput {
+  id: ID!
+  lived: String!
+  name_animal: String!
+}
+
+type Query {
+  createAnimal(input: AnimalInput!): Animal!
+  getAnimal(id: Float!): Animal!
+  getAnimals(filter: AnimalArgs!): [Animal!]!
+}
